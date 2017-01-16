@@ -3,10 +3,13 @@
 // All of the Node.js APIs are available in this process.
 const {clipboard} = require('electron')
 const path = require('path');
+const notifier = require('node-notifier');
+
 let isListening = false;
 let clipboardData = '';
 let theInterval = null;
 function checkData() {
+
     const textFromClipboard = clipboard.readText();
     if(clipboardData !== textFromClipboard) {
       clipboardData = textFromClipboard;
@@ -29,12 +32,12 @@ function startStopListening() {
 }
 
 function doNotify(evt) {
-
+  console.log
   const options ={
     title: "NRDS Lookup Result",
-    body: clipboardData
+    message: clipboardData
   }
-  new Notification(options.title, options);
+  notifier.notify(options);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
