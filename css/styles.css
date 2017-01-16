@@ -1,0 +1,19 @@
+body {
+  color: #482D00;
+  margin: 0 auto;
+  text-align:center;
+  background-color: #575859;
+}
+
+h1 {
+  text-transform: uppercase;
+
+}
+
+#notify {
+  text-transform: uppercase;
+  color: #482D00;
+  background-color: #575859;
+  border-color: #482D00;
+  font-size: 2em;
+}

@@ -34,7 +34,7 @@ function startStopListening() {
 function doNotify(evt) {
   console.log
   const options ={
-    title: "NRDS Lookup Result",
+    title: "KOS Lookup Result",
     message: clipboardData
   }
   notifier.notify(options);
